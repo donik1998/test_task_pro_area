@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:new_test_stuff/presentation/home_page/bloc/home_page_bloc.dart';
@@ -5,9 +6,8 @@ import 'package:new_test_stuff/presentation/home_page/bloc/home_page_event.dart'
 import 'package:new_test_stuff/presentation/home_page/home_page.dart';
 
 void main() async {
-  // WidgetsFlutterBinding.ensureInitialized();
-  // final sp = await SharedPreferences.getInstance();
-  // await sp.clear();
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
